@@ -1,27 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import "./Header.css"
 function Header() {
-  const {currUser} = useSelector(state => state.user);
   return (
-    <div>
-        <h1>Home</h1>
-      <ul>
-        <Link to="/dashboard">
-        <li>Dashboard</li>
-        </Link>
-        <Link to="/signin">
-        <li>Signin</li>
-        </Link>
-        <Link to="/signup">
-        <li>SignUp</li>
-        </Link>
-        <Link to="/user">
-        <li>Profile</li>
-        </Link>
-      </ul>
+    <div className="navbar">
+      <a href="#home" className="nav-link">Home</a>
+      <a href="#allproblems" className="nav-link">All Problems</a>
+      <a href="#calendar" className="nav-link">Calendar</a>
+      <a href="#logout" className="nav-link">Logout</a>
     </div>
-  )
+  );
 }
 
 export default Header

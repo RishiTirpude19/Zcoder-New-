@@ -19,7 +19,7 @@ const CalendarComponent = () => {
   }, [selectedDate, contests]);
 
   const fetchContests = async () => {
-    setLoading(true);  // Start loading when fetching data
+    setLoading(true); 
     try {
       const response = await axios.get('https://codeforces.com/api/contest.list');
       const upcomingContests = response.data.result.filter(contest => contest.phase === 'BEFORE');
@@ -27,7 +27,7 @@ const CalendarComponent = () => {
     } catch (error) {
       console.error('Error fetching contests', error);
     } finally {
-      setLoading(false);  // Stop loading after fetching data
+      setLoading(false); 
     }
   };
 
