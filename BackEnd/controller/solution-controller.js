@@ -2,6 +2,7 @@ const User = require("../models/user-model");
 const Problem = require("../models/problem-model");
 const Solution = require("../models/solution-model");
 const { errorHandeler } = require("../utils/error");
+const Review = require("../models/review-model");
 
 module.exports.addSolution = async(req,res,next)=>{
     let user = await User.findById(req.user._id);
@@ -41,7 +42,10 @@ module.exports.destroySolution = async (req,res,next)=>{
             return next(errorHandeler(404 , "Bad request"));
         }
         await User.findByIdAndUpdate(req.user._id , {$pull : {solutions : req.params.solId}});
-        await Problem.findByIdAndUpdate(req.params.id , {$pull : {solutions : req.params.solId}})
+        await Problem.findByIdAndUpdate(req.params.id , {$pull : {solutions : req.params.solId}});
+        for(rev of solution.reviews){
+            await Review.findByIdAndDelete(rev._id);
+        }
         await Solution.findByIdAndDelete(req.params.solId);
         res.status(200).json({message : "Solution Deleted successfully"});       
     } catch (error) {

@@ -23,7 +23,11 @@ const soulutionSchema = new Schema({
             type : Schema.Types.ObjectId,
             ref : "Review"
         }
-    ]
+    ],
+    disscussion : {
+        type : Schema.Types.ObjectId,
+        ref : "Chat"
+    }
 } , {timestamps : true})
 
 const Solution  = mongoose.model("Solution" , soulutionSchema);

@@ -1,0 +1,30 @@
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.events {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.event h2 {
+    margin: 0 0 10px 0;
+}
+
+.event p {
+    margin: 5px 0;
+}

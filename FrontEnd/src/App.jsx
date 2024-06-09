@@ -6,16 +6,11 @@ import Profile from './pages/Profile';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import Header from './components/Header';
+import CalenderComponent from './pages/CalenderComponent';
 export default function App() {
   return (
-    <BrowserRouter>
-      <Header></Header>
-      <Routes>
-      <Route path='/' element={<Dashboard/>}/>
-      <Route path='/user' element={<Profile/>}/>
-      <Route path='/signin' element={<Signin/>}/>
-      <Route path='/signup' element={<Signup/>}/>
-      </Routes>
-    </BrowserRouter>
+    <>
+      <CalenderComponent />
+    </>
   )
 }

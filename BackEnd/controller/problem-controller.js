@@ -2,6 +2,7 @@ const User = require("../models/user-model");
 const Problem = require("../models/problem-model");
 const Solution = require("../models/solution-model");
 const {errorHandeler} = require("../utils/error");
+const Review = require("../models/review-model");
 
 module.exports.addProblem = async (req,res,next)=>{
     try {
@@ -40,6 +41,12 @@ module.exports.destroyProblem = async (req, res, next) => {
             return res.status(403).json({ message: 'User not authorized to delete this problem' });
         }
         await User.findByIdAndUpdate(userId, { $pull: { problems: problemId } });
+        for(let sol of problem.solutions){
+            await Solution.findByIdAndDelete(sol._id);
+        };
+        for(let rev of problem.reviews){
+            await Review.findByIdAndDelete(rev._id);
+        };
         await Problem.findByIdAndDelete(problemId);
         res.status(200).json({ message: 'Problem deleted successfully' });
     } catch (error) {

@@ -37,6 +37,10 @@ const problemSchema = new Schema({
     ],
     link : {
         type : String,
+    },
+    disscussion : {
+        type : Schema.Types.ObjectId,
+        ref : "Chat"
     }
 } , {timestamps : true})
 
