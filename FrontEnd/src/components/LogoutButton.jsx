@@ -9,7 +9,7 @@ function LogoutButton() {
     try {
       await axios.post('/api/auth/logout');
       localStorage.removeItem('token');
-      navigate('/signin');
+      navigate('/');
     } catch (error) {
       console.error('Error logging out:', error);
     }

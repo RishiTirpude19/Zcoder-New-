@@ -6,18 +6,22 @@ import Signin from './pages/Signin';
 import CalenderComponent from "./pages/CalenderComponent"
 import ProtectedRoute from './auth-components/ProtectedRoute';
 import LogoutButton from './components/LogoutButton';
+import Signup from './pages/Signup';
+import LandingPage from './pages/LandingPage';
 
 export default function App() {
   
   return (
     <Router>
       <div className="App">
-        <ProtectedRoute><LogoutButton/></ProtectedRoute>
+        <LogoutButton/>
         <div style={{ paddingTop: '60px' }}>
           <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route path="/signin" element={<Signin />} />
-            <Route path='/calender' element={<CalenderComponent/>}/>
+            <Route path='/calender' element={<ProtectedRoute><CalenderComponent/></ProtectedRoute>}/>
           </Routes>
         </div>
       </div>

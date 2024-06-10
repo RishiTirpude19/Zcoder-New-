@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import "./Signin.css";
-
+import { Link } from 'react-router-dom';
 function Signin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -26,25 +26,28 @@ function Signin() {
         <h2>Sign In</h2>
         {error && <p className="error">{error}</p>}
         <div>
-          <label>Email:</label>
+          <label for="email">Email:</label>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            id='email'
           />
         </div>
         <div>
-          <label>Password:</label>
+          <label for="password">Password:</label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            id='password'
           />
         </div>
         <button type="submit">Sign In</button>
       </form>
+      <p>Don't Have an Account ? <Link to="/signup" className='message'>Sign Up</Link></p>
     </div>
   )
 }
