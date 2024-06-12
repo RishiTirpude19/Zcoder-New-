@@ -8,6 +8,7 @@ import ProtectedRoute from './auth-components/ProtectedRoute';
 import LogoutButton from './components/LogoutButton';
 import Signup from './pages/Signup';
 import LandingPage from './pages/LandingPage';
+import ProblemDetails from './pages/ProblemDetails';
 
 export default function App() {
   
@@ -22,6 +23,7 @@ export default function App() {
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route path="/signin" element={<Signin />} />
             <Route path='/calender' element={<ProtectedRoute><CalenderComponent/></ProtectedRoute>}/>
+            <Route path="/problem/:id" element={<ProtectedRoute><ProblemDetails /></ProtectedRoute>} />
           </Routes>
         </div>
       </div>

@@ -3,7 +3,7 @@ const User = require("../models/user-model");
 
 module.exports.showAllPublicProblem = async(req,res,next)=>{
     try {
-        let allProblems = await Problem.find({choice : "public"}).populate("user");
+        let allProblems = await Problem.find({choice : "public"}).sort({ createdAt: -1 }).populate("user");
         res.status(200).json(allProblems);
     } catch (error) {
         next(error);

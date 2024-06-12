@@ -33,7 +33,7 @@ input {
     border-radius: 4px;
 }
 
-button {
+.signin-btn {
     padding: 10px;
     border: none;
     border-radius: 4px;
@@ -43,9 +43,9 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+/* .signin-btn:hover {
     background-color: #0056b3;
-}
+} */
 
 .error {
     color: red;

@@ -81,7 +81,7 @@ module.exports.updateProblem = async (req,res,next)=>{
 module.exports.showProblem = async (req,res ,next)=>{
     try {
         let id = req.params.id;
-        let problem = await Problem.findById(id).populate("solutions").populate("user");
+        let problem = await Problem.findById(id).populate("solutions").populate("user").populate("reviews");
         res.status(200).json(problem);
     } catch (error) {
         next(error);

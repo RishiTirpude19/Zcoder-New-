@@ -45,7 +45,7 @@ function Signin() {
             id='password'
           />
         </div>
-        <button type="submit">Sign In</button>
+        <button className='signin-btn' type="submit">Sign In</button>
       </form>
       <p>Don't Have an Account ? <Link to="/signup" className='message'>Sign Up</Link></p>
     </div>

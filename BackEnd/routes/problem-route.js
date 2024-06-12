@@ -8,7 +8,6 @@ const isProbOwner = require('../middleware/isProbOwner');
 router.post("/addproblem" , authMiddleware,  PC.addProblem);
 router.delete("/:id" , authMiddleware ,isProbOwner, PC.destroyProblem);
 router.put("/:id" ,authMiddleware , isProbOwner, PC.updateProblem);
-router.get("/:id" , authMiddleware , PC.showProblem);
+router.get("/:id" , authMiddleware , PC.showProblem); //FRONTEND CREATED
 router.post("/:id/addbookmark" , authMiddleware , PC.addBookMark);
-//review route
 module.exports = router;
