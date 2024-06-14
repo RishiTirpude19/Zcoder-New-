@@ -15,7 +15,7 @@ function AddProblem() {
     choice: 'public',  // default value
     platform: {
       name: '',
-      ratings: 0,
+      rating: 0,
     },
     link: '',
   });
@@ -63,7 +63,7 @@ function AddProblem() {
       setError(error.response ? error.response.data.message : error.message);
     } finally {
       setLoading(false);
-    }
+    } 
   };
 
   return (
@@ -107,7 +107,7 @@ function AddProblem() {
         </div>
         <div>
           <label>Platform Ratings</label>
-          <input type="number" name="platform.ratings" value={formData.platform.ratings} onChange={handleChange} required />
+          <input type="number" name="platform.rating" value={formData.platform.rating} onChange={handleChange} required />
         </div>
         <div>
           <label>Link</label>
