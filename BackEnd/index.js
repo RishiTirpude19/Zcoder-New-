@@ -16,12 +16,12 @@ app.use(cookieParser());
 
 main().catch(err => console.log(err));
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/coder');
+  await mongoose.connect(process.env.MONGO_URI);
   console.log("Connected to DB")
 }
 
 
-const port = 3000;
+const port = process.env.PORT;
 
 app.listen(port , ()=>{
     console.log(`Server is Listing on port : ${port}`);
