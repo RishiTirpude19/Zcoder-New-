@@ -90,5 +90,5 @@ Start the server
 ```bash
   npm run dev
 ```
-#### The Client side would be Locally Hosted on http://localhost:5173/ with properly intregrated server.
+#### The Client side would be Locally Hosted on http://localhost:5173/ with properly intregrated server APIs.
 
