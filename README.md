@@ -31,7 +31,7 @@ Utilize the inbuilt code editor with real-time output to solve coding problems d
 
 ## Tech Stack Used:
 
-**FrontEnd:** React , Material UI , Chakara UI
+**FrontEnd:** React , Material UI , Chakara UI , Context API
 
 **BackEnd:** Node, Express , Socket.io , BcryptJs , JWT , OAuth 2.0
 
