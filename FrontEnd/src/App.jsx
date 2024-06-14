@@ -9,6 +9,7 @@ import LogoutButton from './components/LogoutButton';
 import Signup from './pages/Signup';
 import LandingPage from './pages/LandingPage';
 import ProblemDetails from './pages/ProblemDetails';
+import AddProblem from './pages/AddProblem';
 
 export default function App() {
   
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+            <Route path="/addproblem" element={<ProtectedRoute><AddProblem/></ProtectedRoute>} />
             <Route path="/signin" element={<Signin />} />
             <Route path='/calender' element={<ProtectedRoute><CalenderComponent/></ProtectedRoute>}/>
             <Route path="/problem/:id" element={<ProtectedRoute><ProblemDetails /></ProtectedRoute>} />

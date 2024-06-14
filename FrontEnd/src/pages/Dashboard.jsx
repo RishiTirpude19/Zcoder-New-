@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProblemCard from '../components/ProblemCard';
-import AddProblems from '../components/AddProblems';
 import "./Dashboard.css";
 function Dashboard() {
 
@@ -53,8 +52,7 @@ function Dashboard() {
   }
 
   return (
-    <div className='container'>  
-     <AddProblems/>
+    <div className='container'>
       <div className="dashboard">
       <h1>Problems</h1>
         {problems.length > 0 ? (
