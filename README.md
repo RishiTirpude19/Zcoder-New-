@@ -71,7 +71,7 @@ Install BackEnd dependencies
 Start the server
 
 ```bash
-  npm nodemon index.js
+  nodemon index.js
 ```
 Go to the FrontEnd directory
 
@@ -85,7 +85,7 @@ Install FrontEnd dependencies
   npm install
 ```
 
-Start the server
+Start the Client side
 
 ```bash
   npm run dev
