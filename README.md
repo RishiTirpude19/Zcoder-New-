@@ -76,7 +76,7 @@ Start the server
 Go to the FrontEnd directory
 
 ```bash
-  cd BackEnd
+  cd FrontEnd
 ```
 
 Install FrontEnd dependencies
