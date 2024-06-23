@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 function ProblemDetails() {
-     const { id } = useParams();
+    const { id } = useParams();
     const [problem, setProblem] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

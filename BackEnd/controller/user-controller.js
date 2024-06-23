@@ -1,6 +1,16 @@
 const User = require("../models/user-model");
 const { errorHandeler } = require("../utils/error");
 
+module.exports.showUser = async(req,res,next)=>{
+    try {
+        let userId = req.user._id;
+        let user = await User.findById(userId).select("-password");
+        res.json(user);
+        
+    } catch (error) {
+        next(error)
+    }
+}
 module.exports.showMyProblems = async(req,res ,next)=>{
     try {
         let user = await User.findById(req.user._id).populate("problems");
