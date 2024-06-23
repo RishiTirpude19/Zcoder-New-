@@ -31,7 +31,7 @@ Utilize the inbuilt code editor with real-time output to solve coding problems d
 
 ## Tech Stack Used:
 
-**FrontEnd:** React , Material UI , Chakara UI
+**FrontEnd:** React , Material UI , Chakara UI , Context API
 
 **BackEnd:** Node, Express , Socket.io , BcryptJs , JWT , OAuth 2.0
 
@@ -71,12 +71,12 @@ Install BackEnd dependencies
 Start the server
 
 ```bash
-  npm nodemon index.js
+  nodemon index.js
 ```
 Go to the FrontEnd directory
 
 ```bash
-  cd BackEnd
+  cd FrontEnd
 ```
 
 Install FrontEnd dependencies
@@ -85,10 +85,10 @@ Install FrontEnd dependencies
   npm install
 ```
 
-Start the server
+Start the Client side
 
 ```bash
   npm run dev
 ```
-#### The Client side would be Locally Hosted on http://localhost:5173/ with properly intregrated server.
+#### The Client side would be Locally Hosted on http://localhost:5173/ with properly intregrated server APIs.
 
