@@ -12,6 +12,9 @@ export const UserProvider = ({ children }) => {
   const [otherBookmarkedProblems, setOtherBookmarkedProblems] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
   const [error, setError] = useState(null); // Add error state
+  const [favLanguage , setFavLanguage] = useState(null);
+  const [rating , setRating] = useState(null);
+  const [platform ,setPlatform] = useState(null);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -29,12 +32,17 @@ export const UserProvider = ({ children }) => {
         setProblem(response.data.problems);
         setSolution(response.data.solutions);
         setOtherBookmarkedProblems(response.data.otherBookMarkedProblems);
+        setRating(response.data.rating);
+        setPlatform(response.data.platform);
+        setFavLanguage(response.data.favLanguage);
+        
       } catch (err) {
         setError(err.message);
         console.error('Error fetching user data:', err);
       } finally {
         setLoading(false);
       }
+      
     };
 
     fetchUser();
@@ -57,6 +65,9 @@ export const UserProvider = ({ children }) => {
         setOtherBookmarkedProblems,
         loading,
         error,
+        favLanguage , setFavLanguage,
+        rating , setRating,
+        platform ,setPlatform
       }}
     >
       {children}

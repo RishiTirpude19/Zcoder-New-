@@ -2,8 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./ProblemCard.css"
 const ProblemCard = ({ problem }) => {
-   const navigate = useNavigate();
-   const handleClick = () => {
+    const navigate = useNavigate();
+    const handleClick = () => {
     navigate(`/problem/${problem._id}`);
   };
 
