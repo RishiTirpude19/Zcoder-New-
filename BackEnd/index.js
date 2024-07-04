@@ -16,7 +16,7 @@ app.use(cookieParser());
 
 main().catch(err => console.log(err));
 async function main() {
-  await mongoose.connect(process.env.MONGO_URI);
+  await mongoose.connect("mongodb+srv://rishitirpude265:Jy7JWhsR7SIhHsxB@cluster0.komowqj.mongodb.net/zcoder?retryWrites=true&w=majority&appName=Cluster0");
   console.log("Connected to DB")
 }
 

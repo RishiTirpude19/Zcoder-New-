@@ -12,7 +12,7 @@ function AddProblem() {
       exampleinput: '',
       exampleoutput: '',
     },
-    choice: 'public',  // default value
+    choice: 'public', 
     platform: {
       name: '',
       rating: 0,
