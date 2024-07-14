@@ -12,6 +12,7 @@ import ProblemDetails from './pages/ProblemDetails';
 import AddProblem from './pages/AddProblem';
 import Profile from './pages/Profile';
 import { UserProvider } from './components/UserContext';
+import Edit from './pages/Edit';
 
 export default function App() {
   
@@ -29,6 +30,7 @@ export default function App() {
             <Route path='/calender' element={<ProtectedRoute><CalenderComponent/></ProtectedRoute>}/>
             <Route path="/problem/:id" element={<ProtectedRoute><ProblemDetails /></ProtectedRoute>} />
             <Route path='/user' element={<ProtectedRoute><UserProvider><Profile/></UserProvider></ProtectedRoute>}/>
+            <Route path='/user/updateprofile' element={<ProtectedRoute><UserProvider><Edit/></UserProvider></ProtectedRoute>}/>
           </Routes>
         </div>
       </div>

@@ -33,10 +33,9 @@ module.exports.myBookmarkedProblems = async(req,res,next)=>{
 
 module.exports.updateProfile = async(req,res ,next)=>{
     try {
-        let {username , email ,favlanguage,rating,platform} =req.body;
+        let {username,favlanguage,rating,platform} =req.body;
         let user = await User.findByIdAndUpdate(req.user._id ,{
             username, 
-            email,
             favlanguage,
             rating,
             platform,
