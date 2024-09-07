@@ -1,58 +1,49 @@
 .signin-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(167, 248, 5);
+    box-shadow: 2px 2px 1000px rgba(0, 0, 0, 1);
 }
-
-form {
-    display: flex;
-    flex-direction: column;
+h1 {
+    margin-left: 1rem;
 }
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-div {
-    margin-bottom: 10px;
-}
-
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.signin-btn {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
+.signin-btn{
+    height: 3rem;
+    width: 10rem;
+    border-radius: 1rem;
+    background-color: aqua;
+    font-size: 1.5rem;
     cursor: pointer;
+    margin: 1rem;
 }
-
-/* .signin-btn:hover {
-    background-color: #0056b3;
-} */
-
-.error {
-    color: red;
-    text-align: center;
-    margin-bottom: 10px;
+.btn-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    margin-top: 1rem;
+    color: black;
+    font-size: larger;
+    font-weight: 600;
+    margin-left: 0.5rem;
 }
 .message {
-    text-decoration: none;
-    color: red;
+    color: rgb(225, 6, 6);
+}
+.email {
+    font-size: x-large;
+    margin: 0.5rem;
+}
+.password{
+    font-size: x-large;
+    margin: 0.5rem;
+}
+.email input {
+    margin-left: 0.5rem;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+}
+.password input {
+    margin-left: 0.5rem;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
 }

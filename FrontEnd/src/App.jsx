@@ -1,26 +1,26 @@
 import './App.css'
-import React from 'react'
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
-import Signin from './pages/Signin';
-import CalenderComponent from "./pages/CalenderComponent"
+const Dashboard = React.lazy(()=> import ('./pages/Dashboard'));
+const Signin = React.lazy(()=> import('./pages/Signin'));
+const CalenderComponent = React.lazy(()=> import("./pages/CalenderComponent"))
 import ProtectedRoute from './auth-components/ProtectedRoute';
 import LogoutButton from './components/LogoutButton';
-import Signup from './pages/Signup';
-import LandingPage from './pages/LandingPage';
-import ProblemDetails from './pages/ProblemDetails';
-import AddProblem from './pages/AddProblem';
-import Profile from './pages/Profile';
+const Signup = React.lazy(()=> import ('./pages/Signup'));
+const LandingPage = React.lazy(()=> import ('./pages/LandingPage'));
+const ProblemDetails = React.lazy(()=> import ('./pages/ProblemDetails'));
+const AddProblem = React.lazy(()=> import ('./pages/AddProblem'));
+const Profile = React.lazy(()=> import ('./pages/Profile'));
 import { UserProvider } from './components/UserContext';
-import Edit from './pages/Edit';
+const Edit = React.lazy(()=> import ('./pages/Edit'));
 
 export default function App() {
   
   return (
     <Router>
       <div className="App">
-        <LogoutButton/>
-        <div style={{ paddingTop: '60px' }}>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/signup" element={<Signup />} />
@@ -33,6 +33,7 @@ export default function App() {
             <Route path='/user/updateprofile' element={<ProtectedRoute><UserProvider><Edit/></UserProvider></ProtectedRoute>}/>
           </Routes>
         </div>
+      </Suspense>
       </div>
     </Router>
   )
